@@ -35,8 +35,6 @@ function checkAnswers() {
 }
 
 checkAnswers();
-checkParity();
-
 
 const A = +prompt("Enter a:");
 const B = +prompt("Enter b:");
