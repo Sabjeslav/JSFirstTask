@@ -59,9 +59,13 @@ const C = +prompt("Enter c:");
  * @param {number} a - A coefficient of equation
  * @param {number} b - B coefficient of equation
  * @param {number} c - C coefficient of equation
- * @returns {null | [number, number]} - null is discriminant === 0, array for x1, x2
+ * @returns {null | [number, number]} - null if discriminant === 0, array for x1, x2 values
  */
 const quadratic = function (a, b, c) {
+  if (isNaN(a-b-c)) {
+    console.error('Numbers are incorrect! Please check carefully input data');
+    return null;
+  }
   const D = b ** 2 - 4 * a * c;
   console.log("Discriminant: ", D);
   if (D < 0) return null;
