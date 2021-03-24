@@ -35,7 +35,7 @@ const minValue = function (val1, val2) {
  * @returns {boolean} - true if number is even, false if number is odd
  */
 const checkParity = function (number) {
-  return (number % 2 === 0);
+  return number % 2 === 0;
 };
 
 /**
@@ -44,7 +44,7 @@ const checkParity = function (number) {
 function checkAnswers() {
   console.log("Max value is: ", maxValue(firstNum, secondNum));
   console.log("Min value is: ", minValue(firstNum, secondNum));
-  if (checkParity(num)) console.log(`${num} is even`)
+  if (checkParity(num)) console.log(`${num} is even`);
   else console.log(`${num} is odd`);
 }
 
@@ -62,8 +62,8 @@ const C = +prompt("Enter c:");
  * @returns {null | [number, number]} - null if discriminant === 0, array for x1, x2 values
  */
 const quadratic = function (a, b, c) {
-  if (isNaN(a-b-c)) {
-    console.error('Numbers are incorrect! Please check carefully input data');
+  if (isNaN(a - b - c) || a === 0) {
+    console.error("Numbers are incorrect! Please check carefully input data");
     return NaN;
   }
   const D = b ** 2 - 4 * a * c;
