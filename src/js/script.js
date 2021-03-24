@@ -83,4 +83,4 @@ const quadratic = function (a, b, c) {
   return [x1, x2];
 };
 
-console.log(quadratic(A, B, C));
+quadratic(A, B, C);
