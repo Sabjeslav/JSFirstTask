@@ -74,10 +74,12 @@ const quadratic = function (a, b, c) {
   if (D < 0) return null;
   if (D === 0) {
     const x = -b / (2 * a);
+    console.log(`X1: ${x}, X2: ${x}`);
     return [x, x];
   }
   const x1 = (-b + Math.sqrt(D)) / (2 * a);
   const x2 = (-b - Math.sqrt(D)) / (2 * a);
+  console.log(`X1: ${x1}, X2: ${x2}`);
   return [x1, x2];
 };
 
