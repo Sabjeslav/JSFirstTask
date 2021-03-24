@@ -64,7 +64,7 @@ const C = +prompt("Enter c:");
 const quadratic = function (a, b, c) {
   if (isNaN(a-b-c)) {
     console.error('Numbers are incorrect! Please check carefully input data');
-    return null;
+    return NaN;
   }
   const D = b ** 2 - 4 * a * c;
   console.log("Discriminant: ", D);
